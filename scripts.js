@@ -27,6 +27,12 @@ let addButtonHandler = () => {
     }
 };
 
+function addButtonHandler2() {
+    if ($('li').length < 5) {
+        $('ul').append('<li>My name is ' + name + '</li>');
+    }
+};
+
 $('#add-button').click(addButtonHandler);
 
 $('#remove-button').click(() => {
@@ -46,8 +52,31 @@ if (age < 18) {
     console.log('Old enoght to drink');
 }
 
-console.log('This is the after the if');
+console.log('This is after the if');
 
+let colors = ['orange', 'lime', 'magenta', 'yellow', 'blue'];
+
+$('#box-container').append('<div class="box"></div>');
+$('.box:last-child').css('background', colors[0]);
+$('#box-container').append('<div class="box"></div>');
+$('.box:last-child').css('background', colors[1]);
+$('#box-container').append('<div class="box"></div>');
+$('.box:last-child').css('background', colors[2]);
+$('#box-container').append('<div class="box"></div>');
+$('.box:last-child').css('background', colors[3]);
+$('#box-container').append('<div class="box"></div>');
+$('.box:last-child').css('background', colors[4]);
+
+colors.push('purple', 'brown', 'grey');
+
+colors.forEach((color) => {
+    $('#box-container').append('<div class="box"></div>');
+    $('.box:last-child').css('background', color); 
+});
+
+for (let i = 0; i < 100; i = i + 1) {
+    console.log(i);
+}
 
 // This is a JavaScript comment
 
